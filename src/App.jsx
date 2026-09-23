@@ -6,6 +6,7 @@ import Footer from "./components/layout/Footer";
 import CartPage from "./pages/CartPage";
 import LandingPage from "./pages/LandingPage";
 import FeaturesPage from "./pages/FeaturePage"; 
+import FeatureDetailPage from "./pages/FeatureDetailPage"; 
 import AboutUsPage from "./pages/AboutUsPage";
 import PlansPage from "./pages/PlansPage";
 import Dashboard from "./pages/Dashboard"; 
@@ -16,8 +17,8 @@ import Activity from "./pages/Activity";
 import Predict from "./pages/Predict";
 import Workout from "./pages/WorkOut";
 import Leaderboard from "./pages/Leaderboard";
-import AdminLogin from "./admin/AdminLogin";
-import AdminPanel from "./admin/AdminPanel";
+import AdminLogin from "./admin/Adminlogin";
+import AdminPanel from "./admin/Adminpanel";
 
 function AppContent() {
   const location = useLocation();
@@ -34,6 +35,7 @@ function AppContent() {
         <Routes>
           <Route path="/" element={<LandingPage />} />
           <Route path="/features" element={<FeaturesPage />} />
+          <Route path="/feature/:id" element={<FeatureDetailPage />} />
           <Route path="/products" element={<ProductList />} />
           <Route path="/product/:id" element={<ProductDetails />} />
           <Route path="/cart" element={<CartPage />} />
